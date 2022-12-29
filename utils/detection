@@ -1,0 +1,87 @@
+"""
+import cv2
+from utils import detector_utils as detector_utils
+import numpy as np
+
+
+detection_graph, sess = detector_utils.load_inference_graph()
+
+
+img = cv2.imread("image.jpg")
+
+max_hands_detect = 2
+score_thresh = 0.80
+
+frame = np.array(img)
+
+im_height, im_width = frame.shape[:2]
+
+frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+
+boxes, scores, classes = detector_utils.detect_objects(frame, detection_graph, sess)
+for i in range(100):
+    if scores[i] > 0.90:
+
+        (y_min, x_min, y_max, x_max) = (boxes[i][0]*im_height, boxes[i][1]*im_width,
+                                        boxes[i][2]*im_height, boxes[i][3]*im_width)
+
+        (left, right, top, bottom) = (boxes[i][1] * im_width, boxes[i][3] * im_width,
+                                  boxes[i][0] * im_height, boxes[i][2] * im_height)
+        p1 = (int(left), int(top))
+        p2 = (int(right), int(bottom))
+        print(p1,p2)
+        print(scores[i])
+        print(type(scores))
+        print(scores)
+        print(classes[i])
+
+        cv2.rectangle(frame, p1, p2, (255,0,0), 3, 1)
+
+        p3 = (int(x_min), int(y_min))
+        p4 = (int(x_max), int(y_max))
+
+        cv2.rectangle(frame, p3, p4, (0, 255, 0), 3, 1)
+
+        cv2.imshow("Detection", frame)
+        cv2.waitKey(0)
+"""
+"""
+x = np.array([1,2,3,4,5])
+print(x)
+print(x[1])"""
+"""
+from imutils.video import VideoStream
+
+vs = VideoStream(0).start()
+
+while True:
+    frame = vs.read()
+
+    print("nd_array_shape", frame.shape)
+    frame = np.array(frame)
+    print("array_shape", frame.shape)
+    cv2.imshow("Frame", frame)"""
+
+"""
+lst = [1,1,1,1,1]
+
+x=y=cnt = 0
+
+for i in lst:
+    x=y
+    y=i
+    if x==0 and y==1:
+        cnt = cnt +1
+    print(cnt)
+
+
+from datetime import time
+
+
+x = datetime.now()
+print(x)"""
+
+x = 2.0
+y = 3
+print(x+y)
