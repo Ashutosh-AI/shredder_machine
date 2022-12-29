@@ -23,3 +23,6 @@ I have designed an AI solution using the Computer Vision which includes the foll
 1. Safety Border line (Which will give us the alert alarm if our hand passes that line)
 2. Machine Borderline, if the hand is close to it then our code will pass a signal to the shredder-machine and it will switch off automatically in order to avoid any accident.
 3. With respect to that lines i am also calculating the distance of the hand from Sefty border line.
+
+![Hand_pic1](https://user-images.githubusercontent.com/53949585/209933274-d3806b27-65bc-439f-b935-fa85a163d33c.jpg)
+![Hand_pic2](https://user-images.githubusercontent.com/53949585/209933302-1acf22bf-1a31-468e-ab0a-c049344d8f91.jpg)
