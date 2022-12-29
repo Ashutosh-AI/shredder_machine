@@ -18,7 +18,7 @@ I have designed an AI solution using the Computer Vision which includes the foll
 1. Closed hand(fist) as Gloved Hand
 2. Normal Hand image
 
--> Then i created two border lines with respect to the frame with the help of distance formula that we were capturing.
+--> Then i created two border lines with respect to the frame with the help of distance formula that we were capturing.
 
 1. Safety Border line (Which will give us the alert alarm if our hand passes that line)
 2. Machine Borderline, if the hand is close to it then our code will pass a signal to the shredder-machine and it will switch off automatically in order to avoid any accident.
